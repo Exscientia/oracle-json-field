@@ -32,7 +32,7 @@ class JSONFieldCreateTest(BaseJSONFieldTest):
     """JSONField Wrapper Tests"""
 
     def test_simple_create(self):
-        """Test saving a JSON object in teh JSONField"""
+        """Test saving a JSON object in the JSONField"""
         json_obj = {
             'item_1': 'this is a json blah',
             'something_else': 'Hello'
