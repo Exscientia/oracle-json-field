@@ -1,2 +1,2 @@
 JSON_TRUE='true'
-JSON_False='false'
+JSON_FALSE='false'
