@@ -3,7 +3,7 @@ from django.test import TestCase
 from django.utils import timezone
 
 # Create your tests here.
-from .constants import JSON_TRUE, JSON_False
+from .constants import JSON_TRUE, JSON_FALSE
 from .managers import JsonQueryManager
 from .fields import JSONField
 
@@ -216,7 +216,7 @@ class BooleanJSONFieldQueryTestCase(BaseJSONFieldQueryTestCase):
         self.assertEquals(lookup.count(), 8)
 
     def test_is_false(self):
-        lookup = JsonModel.objects.filter_json(json__x_bool=JSON_False)
+        lookup = JsonModel.objects.filter_json(json__x_bool=JSON_FALSE)
         self.assertEquals(lookup.count(), 2)
 
 
