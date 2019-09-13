@@ -25,7 +25,7 @@ class JsonQuerySet(models.QuerySet):
         :return: A queryset
         """
         # Note: Force a self join so that that table aliases are added, a requirement for json queries.
-        # Can be removed if there is a cleaner mechanism to alias tables.
+        # Can be removed if there is a cleaner mechanism to alias tables
         base_q = super().filter(*args, **kwargs)
         return self.filter(id__in=base_q.values_list('id', flat=True))
 
